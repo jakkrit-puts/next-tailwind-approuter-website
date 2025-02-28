@@ -1,16 +1,18 @@
+import Footer from "@/components/front/Footer";
+import Navbar from "@/components/front/Navbar";
+
 export default function RootLayout({
-    children,
-  }: Readonly<{
-    children: React.ReactNode;
-  }>) {
-    return (
-      <html lang="en">
-        <body className={`antialiased`}>
-          <nav>Header FE</nav>
-          {children}
-          <footer>Footer FE</footer>
-        </body>
-      </html>
-    );
-  }
-  
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
+  return (
+    <html lang="en">
+      <body className={`antialiased`}>
+        <Navbar />
+        {children}
+        <Footer />
+      </body>
+    </html>
+  );
+}
